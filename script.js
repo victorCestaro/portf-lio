@@ -1,0 +1,139 @@
+// MENU HAMBURGER
+const menuHamburger = document.getElementById('menuHamburger');
+const navMobile = document.getElementById('navMobile');
+
+if (menuHamburger) {
+    menuHamburger.addEventListener('click', function() {
+        menuHamburger.classList.toggle('ativo');
+        navMobile.classList.toggle('ativo');
+    });
+}
+
+// Fechar menu mobile ao clicar em um link
+const linksMobile = document.querySelectorAll('.link-menu-mobile');
+linksMobile.forEach(link => {
+    link.addEventListener('click', function() {
+        menuHamburger.classList.remove('ativo');
+        navMobile.classList.remove('ativo');
+    });
+});
+
+// Destacar link ativo no menu
+function ativarLinkMenu() {
+    const links = document.querySelectorAll('.link-menu');
+    const paginaAtual = window.location.pathname.split('/').pop() || 'index.html';
+    
+    links.forEach(link => {
+        const href = link.getAttribute('href');
+        if (href === paginaAtual || (paginaAtual === '' && href === 'index.html')) {
+            link.style.color = '#137FEC';
+            link.style.fontWeight = '700';
+        } else {
+            link.style.color = '#CBD4E1';
+            link.style.fontWeight = '400';
+        }
+    });
+}
+
+// Chamar ao carregar a página
+document.addEventListener('DOMContentLoaded', ativarLinkMenu);
+
+// Filtro de categorias do portfólio (index.html)
+document.querySelectorAll('.aba-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+        const category = this.getAttribute('data-category');
+        
+        // Remove a classe ativa de todos os botões
+        document.querySelectorAll('.aba-btn').forEach(b => b.classList.remove('aba-ativo'));
+        
+        // Adiciona a classe ativa ao botão clicado
+        this.classList.add('aba-ativo');
+        
+        // Filtra os cards de projetos
+        document.querySelectorAll('.card-projeto').forEach(card => {
+            if (card.getAttribute('data-category') === category) {
+                card.style.display = 'flex';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+        
+        // Armazena a categoria selecionada
+        sessionStorage.setItem('selectedCategory', category);
+    });
+});
+
+// Botão "Carregar Mais Projetos" - navega para página do portfólio com a categoria selecionada
+const btnCarregarMais = document.querySelector('.btn-carregar-mais');
+if (btnCarregarMais) {
+    btnCarregarMais.addEventListener('click', function() {
+        const categoryAtiva = document.querySelector('.aba-ativo')?.getAttribute('data-category') || 'todos';
+        window.location.href = `portfolio.html?category=${categoryAtiva}`;
+    });
+}
+
+// Função para mapear categorias da index para da galeria
+function mapearCategoria(categoria) {
+    const mapa = {
+        'websites': 'web-estoque',
+        'jogos': 'demos',
+        'aplicativos': 'apps'
+    };
+    return mapa[categoria] || 'todos';
+}
+
+// Filtro de categorias da galeria (portfolio.html)
+document.querySelectorAll('.aba-filtro').forEach(btn => {
+    btn.addEventListener('click', function() {
+        const filter = this.getAttribute('data-filter');
+        
+        // Remove a classe ativa de todos os botões
+        document.querySelectorAll('.aba-filtro').forEach(b => b.classList.remove('aba-filtro-ativo'));
+        
+        // Adiciona a classe ativa ao botão clicado
+        this.classList.add('aba-filtro-ativo');
+        
+        // Filtra os cards da galeria
+        document.querySelectorAll('.card-galeria').forEach(card => {
+            if (filter === 'todos') {
+                card.style.display = 'flex';
+            } else if (card.getAttribute('data-filter') === filter) {
+                card.style.display = 'flex';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    });
+});
+
+// Aplicar filtro ao carregar a página do portfólio
+function aplicarFiltroInicial() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const categoryParam = urlParams.get('category');
+    
+    if (categoryParam) {
+        const categoryMapeada = mapearCategoria(categoryParam);
+        
+        // Encontra o botão de filtro correspondente
+        const botaoFiltro = document.querySelector(`[data-filter="${categoryMapeada}"]`);
+        
+        if (botaoFiltro) {
+            // Simula clique no botão de filtro
+            botaoFiltro.click();
+        }
+    }
+}
+
+// Chamar ao carregar a página do portfólio
+if (document.querySelectorAll('.aba-filtro').length > 0) {
+    document.addEventListener('DOMContentLoaded', aplicarFiltroInicial);
+}
+
+// Botão voltar na galeria
+const btnVoltar = document.querySelector('.btn-voltar');
+if (btnVoltar) {
+    btnVoltar.addEventListener('click', function() {
+        window.location.href = 'index.html';
+    });
+}
+

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Portifólio - Victor Cestaro</title>
+</head>
+
+<body>
+    <header class="menu-desktop">
+        <div class="logo"><h1 class="nome-principal">Victor Cestaro</h1></div>
+        <nav class="nav-desktop">
+            <a href="index.html" class="link-menu">Inicio</a>
+            <a href="portfolio.html" class="link-menu">Projetos</a>
+            <a href="sobre.html" class="link-menu">Sobre</a>
+            <a href="contato.html" class="link-menu">Contato</a>
+        </nav>
+        <button class="menu-hamburger" id="menuHamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+    
+    <nav class="nav-mobile" id="navMobile">
+        <a href="index.html" class="link-menu-mobile">Inicio</a>
+        <a href="portfolio.html" class="link-menu-mobile">Projetos</a>
+        <a href="sobre.html" class="link-menu-mobile">Sobre</a>
+        <a href="contato.html" class="link-menu-mobile">Contato</a>
+    </nav>
+
+    <main>
+        <section class="banner-entrada">
+            <div class="container-banner">
+                <div class="content-banner">
+                    <h1 class="nome-principal">Victor Cestaro</h1>
+                    <h2 class="subtitulo">Fullstack & Game Dev</h2>
+                    <p class="descricao">Transformando ideias complexas em experiências digitais excepcionais. Especialista em arquitetura escalável e mecânicas de jogos envolventes.</p>
+                    
+                    <div class="botoes-banner">
+                        <a href="portfolio.html"><button class="btn btn-primary">Ver Portfolio</button></a>
+                        <a href="contato.html"><button class="btn btn-secondary">Contato Direto</button></a>
+                    </div>
+
+                    <div class="stats">
+                        <div class="stat-item">
+                            <span class="stat-numero">5+</span>
+                            <span class="stat-label">ANOS EXP</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-numero">40+</span>
+                            <span class="stat-label">PROJETOS</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-numero">12</span>
+                            <span class="stat-label">PRÊMIOS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="code-display">
+                    <div class="code-header">
+                        <span class="code-title">portfolio.main.tsx</span>
+                    </div>
+                    <div class="code-content">
+                        <pre>&lt;div className="hero"&gt;
+  &lt;h1&gt;Victor Cestaro&lt;/h1&gt;
+  &lt;p&gt;Fullstack & Game Dev&lt;/p&gt;
+  &lt;button&gt;Explore&lt;/button&gt;
+&lt;/div&gt;</pre>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="portfolio-destaque">
+            <div class="container-portfolio">
+                <h2 class="titulo-portfolio">Portfólio em Destaque</h2>
+                
+                <div class="abas-portfolio">
+                    <button class="aba-btn aba-ativo" data-category="websites">
+                        <span class="aba-icon">◆</span> Websites
+                    </button>
+                    <button class="aba-btn" data-category="jogos">
+                        <span class="aba-icon">▲</span> Jogos
+                    </button>
+                    <button class="aba-btn" data-category="aplicativos">
+                        <span class="aba-icon">■</span> Aplicativos
+                    </button>
+                </div>
+
+                <div class="grid-projetos">
+                    <!-- WEBSITES -->
+                    <div class="card-projeto" data-category="websites">
+                        <div class="projeto-imagem" style="background: linear-gradient(135deg, #C3E7F3 0%, #B5DFE8 100%); display: flex; align-items: center; justify-content: center; font-size: 2rem;">📊</div>
+                        <div class="projeto-info">
+                            <h3 class="projeto-titulo">Nexus E-commerce</h3>
+                            <p class="projeto-descricao">Plataforma completa com checkout seguro, gestão de estoque em tempo real e...</p>
+                            <div class="projeto-tags">
+                                <span class="tag">HTML5</span>
+                                <span class="tag">PostgreSQL</span>
+                                <span class="tag">Stripe</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-projeto" data-category="jogos">
+                        <div class="projeto-imagem" style="background: linear-gradient(135deg, #1a3a52 0%, #0d1f2d 100%); display: flex; align-items: center; justify-content: center; font-size: 2rem;">🌲</div>
+                        <div class="projeto-info">
+                            <div class="projeto-badge">STEAM</div>
+                            <h3 class="projeto-titulo">Neon Drifter 2077</h3>
+                            <p class="projeto-descricao">Jogo de corrida arcade estilo synthwave com mecânicas de drift inovadoras e linha...</p>
+                            <div class="projeto-tags">
+                                <span class="tag">Unity 3D</span>
+                                <span class="tag">C#</span>
+                                <span class="tag">HL-TL</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-projeto" data-category="aplicativos">
+                        <div class="projeto-imagem" style="background: linear-gradient(135deg, #C3E7F3 0%, #A8D4E0 100%); display: flex; align-items: center; justify-content: center; font-size: 2rem;">📈</div>
+                        <div class="projeto-info">
+                            <div class="projeto-badge-app">APP STORE</div>
+                            <h3 class="projeto-titulo">Orbit Finance</h3>
+                            <p class="projeto-descricao">Aplicativo de gestão financeira pessoal com integração bancária via Open Banking e i...</p>
+                            <div class="projeto-tags">
+                                <span class="tag">React Native</span>
+                                <span class="tag">Firebase</span>
+                                <span class="tag">Node.js</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container-botao-carregar">
+                    <button class="btn-carregar-mais" onclick="window.location.href='portfolio.html'">Carregar Mais Projetos</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="caracteristicas">
+            <div class="container-caracteristicas">
+                <div class="card-caracteristica">
+                    <div class="caracteristica-icone">✓</div>
+                    <h3 class="caracteristica-titulo">Arquitetura Sólida</h3>
+                    <p class="caracteristica-descricao">Código limpo, escalável e fácil de manter, focado em performance.</p>
+                </div>
+
+                <div class="card-caracteristica">
+                    <div class="caracteristica-icone">⚡</div>
+                    <h3 class="caracteristica-titulo">Performance Máxima</h3>
+                    <p class="caracteristica-descricao">Otimizações avançadas para carregamento rápido e fluidez absoluta.</p>
+                </div>
+
+                <div class="card-caracteristica">
+                    <div class="caracteristica-icone">▲</div>
+                    <h3 class="caracteristica-titulo">Multiplataforma</h3>
+                    <p class="caracteristica-descricao">Experiências consistentes em Web, Mobile e Desktop.</p>
+                </div>
+
+                <div class="card-caracteristica">
+                    <div class="caracteristica-icone">◆</div>
+                    <h3 class="caracteristica-titulo">Inovação UX</h3>
+                    <p class="caracteristica-descricao">Design centrado no usuário com interfaces modernas e intuitivas.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container-footer">
+            <div class="footer-logo">
+                <span class="logo-icon">💻</span>
+                <span class="logo-text">VictorCestaro</span>
+            </div>
+
+            <div class="footer-content">
+                <p class="footer-copyright">© 2024 Design & Código por Victor Cestaro.<br>Todos os direitos reservados.</p>
+                
+                <div class="footer-sociais">
+                    <a href="mailto:contact@victorcestaro.com" class="social-link" title="Email">
+                        <span class="social-icon">✉</span> Email
+                    </a>
+                    <a href="https://linkedin.com/in/victorcestaro" target="_blank" class="social-link" title="LinkedIn">
+                        <span class="social-icon">in</span> LinkedIn
+                    </a>
+                    <a href="https://github.com/victorcestaro" target="_blank" class="social-link" title="GitHub">
+                        <span class="social-icon">◈</span> GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

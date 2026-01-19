@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Portfólio Completo - Victor Cestaro</title>
+</head>
+
+<body>
+    <header class="menu-desktop">
+         <div class="logo"><h1 class="nome-principal">Victor Cestaro</h1></div>
+        <nav class="nav-desktop">
+            <a href="index.html" class="link-menu">Inicio</a>
+            <a href="portfolio.html" class="link-menu">Projetos</a>
+            <a href="sobre.html" class="link-menu">Sobre</a>
+            <a href="contato.html" class="link-menu">Contato</a>
+        </nav>
+        <button class="menu-hamburger" id="menuHamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+    
+    <nav class="nav-mobile" id="navMobile">
+        <a href="index.html" class="link-menu-mobile">Inicio</a>
+        <a href="portfolio.html" class="link-menu-mobile">Projetos</a>
+        <a href="sobre.html" class="link-menu-mobile">Sobre</a>
+        <a href="contato.html" class="link-menu-mobile">Contato</a>
+    </nav>
+
+    <main>
+        <section class="galeria-projetos">
+            <div class="container-galeria">
+                <div class="galeria-header">
+                    <div class="galeria-info">
+                        <h1 class="galeria-titulo">Galeria de Projetos</h1>
+                        <p class="galeria-descricao">Uma vasta diversão nas mesmas especializações técnicas em desenvolvimento web, mobile e jogos é o meu portfólio.</p>
+                    </div>
+                    <button class="btn-voltar">
+                        <span>← Voltar</span>
+                    </button>
+                </div>
+
+                <div class="filtros-galeria">
+                    <div class="abas-filtro">
+                        <button class="aba-filtro aba-filtro-ativo" data-filter="todos">
+                            Todos
+                        </button>
+                        <button class="aba-filtro" data-filter="web-estoque">
+                            Web Estoque
+                        </button>
+                        <button class="aba-filtro" data-filter="web-uso">
+                            Web Uso
+                        </button>
+                        <button class="aba-filtro" data-filter="demos">
+                            Demos
+                        </button>
+                        <button class="aba-filtro" data-filter="apps">
+                            Apps
+                        </button>
+                    </div>
+                </div>
+
+                <div class="grid-galeria">
+                    <!-- E-commerce Pro -->
+                    <div class="card-galeria" data-filter="web-estoque">
+                        <div class="galeria-imagem">
+                            <span class="badge-galeria">PRO</span>
+                            <div style="background: linear-gradient(135deg, #C3E7F3 0%, #B5DFE8 100%); width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; gap: 0.5rem;">
+                                <div style="width: 40%; height: 100%; background: linear-gradient(135deg, #A8D4E0 0%, #8FC5D8 100%);"></div>
+                                <div style="width: 60%; height: 100%; background: linear-gradient(135deg, #B5DFE8 0%, #98CDE0 100%);"></div>
+                            </div>
+                        </div>
+                        <div class="galeria-card-info">
+                            <h3 class="galeria-card-titulo">E-commerce Pro</h3>
+                            <p class="galeria-card-descricao">Plataforma de e-commerce robusta com Dashboard administrativo, gestão de estoque e integração...</p>
+                            <div class="galeria-card-tags">
+                                <span class="galeria-tag">React</span>
+                                <span class="galeria-tag">Node.js</span>
+                                <span class="galeria-tag">PostgreSQL</span>
+                            </div>
+                            <div class="galeria-card-footer">
+                                <button class="btn-ver-projeto">Ver Projeto</button>
+                                <button class="btn-compartilhar" title="Compartilhar">⧉</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- RPG Inventory System -->
+                    <div class="card-galeria" data-filter="demos">
+                        <div class="galeria-imagem">
+                            <span class="badge-galeria">STEAM</span>
+                            <div style="background: linear-gradient(135deg, #1a3a52 0%, #0d1f2d 100%); width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; font-size: 2rem;">🗻</div>
+                        </div>
+                        <div class="galeria-card-info">
+                            <h3 class="galeria-card-titulo">RPG Inventory System</h3>
+                            <p class="galeria-card-descricao">Sistema dinâmico de inventário para RPGs com mecânicas de armazenamento, rareidade e combate...</p>
+                            <div class="galeria-card-tags">
+                                <span class="galeria-tag">Unity</span>
+                                <span class="galeria-tag">C#</span>
+                                <span class="galeria-tag">Game Design</span>
+                            </div>
+                            <div class="galeria-card-footer">
+                                <button class="btn-ver-projeto">Ver Projeto</button>
+                                <button class="btn-compartilhar" title="Compartilhar">⧉</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- HealthTrack Mobile -->
+                    <div class="card-galeria" data-filter="apps">
+                        <div class="galeria-imagem">
+                            <span class="badge-galeria">APP</span>
+                            <div style="background: linear-gradient(135deg, #C3E7F3 0%, #A8D4E0 100%); width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; font-size: 2rem;">📈</div>
+                        </div>
+                        <div class="galeria-card-info">
+                            <h3 class="galeria-card-titulo">HealthTrack Mobile</h3>
+                            <p class="galeria-card-descricao">Aplicativo mobile para rastreamento de saúde, metas de atividade física e integração com wearables...</p>
+                            <div class="galeria-card-tags">
+                                <span class="galeria-tag">React Native</span>
+                                <span class="galeria-tag">Firebase</span>
+                                <span class="galeria-tag">Wearables</span>
+                            </div>
+                            <div class="galeria-card-footer">
+                                <button class="btn-ver-projeto">Ver Projeto</button>
+                                <button class="btn-compartilhar" title="Compartilhar">⧉</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Smart Home Dashboard -->
+                    <div class="card-galeria" data-filter="web-uso">
+                        <div class="galeria-imagem">
+                            <span class="badge-galeria">WEB</span>
+                            <div style="background: linear-gradient(135deg, #2A3A52 0%, #1A2A3A 100%); width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; font-size: 2rem; color: #555;">⚙</div>
+                        </div>
+                        <div class="galeria-card-info">
+                            <h3 class="galeria-card-titulo">Smart Home Dashboard</h3>
+                            <p class="galeria-card-descricao">Dashboard inteligente para controle de dispositivos IoT residenciais com automação MQTT e real-time...</p>
+                            <div class="galeria-card-tags">
+                                <span class="galeria-tag">Vue.js</span>
+                                <span class="galeria-tag">MQTT</span>
+                                <span class="galeria-tag">IoT</span>
+                            </div>
+                            <div class="galeria-card-footer">
+                                <button class="btn-ver-projeto">Ver Projeto</button>
+                                <button class="btn-compartilhar" title="Compartilhar">⧉</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Neon Void -->
+                    <div class="card-galeria" data-filter="demos">
+                        <div class="galeria-imagem">
+                            <span class="badge-galeria">INDIE</span>
+                            <div style="background: linear-gradient(135deg, #1a0a2e 0%, #0f051a 100%); width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; font-size: 2rem;">🤖</div>
+                        </div>
+                        <div class="galeria-card-info">
+                            <h3 class="galeria-card-titulo">Neon Void</h3>
+                            <p class="galeria-card-descricao">Jogo indie cyberpunk com mecânicas inovadoras de controle neural e narrativa dinâmica procedural...</p>
+                            <div class="galeria-card-tags">
+                                <span class="galeria-tag">Unreal Engine</span>
+                                <span class="galeria-tag">C++</span>
+                                <span class="galeria-tag">Pixel Art</span>
+                            </div>
+                            <div class="galeria-card-footer">
+                                <button class="btn-ver-projeto">Ver Projeto</button>
+                                <button class="btn-compartilhar" title="Compartilhar">⧉</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Creative Portfolio -->
+                    <div class="card-galeria" data-filter="web-estoque">
+                        <div class="galeria-imagem">
+                            <span class="badge-galeria">DESIGN</span>
+                            <div style="background: linear-gradient(135deg, #E8D4C4 0%, #D4C0B0 100%); width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; font-size: 2rem;">👩</div>
+                        </div>
+                        <div class="galeria-card-info">
+                            <h3 class="galeria-card-titulo">Creative Portfolio</h3>
+                            <p class="galeria-card-descricao">Portfólio criativo com galeria interativa, filtros dinâmicos e integração com redes sociais profissionais...</p>
+                            <div class="galeria-card-tags">
+                                <span class="galeria-tag">Gatsby</span>
+                                <span class="galeria-tag">GraphQL</span>
+                                <span class="galeria-tag">Framer Motion</span>
+                            </div>
+                            <div class="galeria-card-footer">
+                                <button class="btn-ver-projeto">Ver Projeto</button>
+                                <button class="btn-compartilhar" title="Compartilhar">⧉</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="destaques-tecnicos">
+            <div class="container-destaques">
+                <h2 class="destaques-titulo">Destaques Técnicos</h2>
+                <p class="destaques-descricao">Top tecnologias e metodologias que atuam em meus projetos.</p>
+
+                <div class="grid-tecnologias">
+                    <div class="card-tecnologia">
+                        <span class="tech-icon">⬢</span>
+                        <span class="tech-nome">React</span>
+                    </div>
+                    <div class="card-tecnologia">
+                        <span class="tech-icon">▲</span>
+                        <span class="tech-nome">Unity</span>
+                    </div>
+                    <div class="card-tecnologia">
+                        <span class="tech-icon">◆</span>
+                        <span class="tech-nome">Node.js</span>
+                    </div>
+                    <div class="card-tecnologia">
+                        <span class="tech-icon">■</span>
+                        <span class="tech-nome">React Native</span>
+                    </div>
+                    <div class="card-tecnologia">
+                        <span class="tech-icon">⬠</span>
+                        <span class="tech-nome">PostgreSQL</span>
+                    </div>
+                    <div class="card-tecnologia">
+                        <span class="tech-icon">☁</span>
+                        <span class="tech-nome">AWS</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container-footer">
+            <div class="footer-logo">
+                <span class="logo-icon">💻</span>
+                <span class="logo-text">VictorCestaro</span>
+            </div>
+
+            <div class="footer-content">
+                <p class="footer-copyright">© 2024 Design & Código por Victor Cestaro.<br>Todos os direitos reservados.</p>
+                
+                <div class="footer-sociais">
+                    <a href="mailto:contact@victorcestaro.com" class="social-link" title="Email">
+                        <span class="social-icon">✉</span> Email
+                    </a>
+                    <a href="https://linkedin.com/in/victorcestaro" target="_blank" class="social-link" title="LinkedIn">
+                        <span class="social-icon">in</span> LinkedIn
+                    </a>
+                    <a href="https://github.com/victorcestaro" target="_blank" class="social-link" title="GitHub">
+                        <span class="social-icon">◈</span> GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
